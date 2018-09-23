@@ -7,3 +7,4 @@ This is my website. It uses AWS and ReactJS
 Chocolatey
 Git
 Sourcetree
+Python
