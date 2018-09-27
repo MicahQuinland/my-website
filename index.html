@@ -462,7 +462,12 @@
                   <div class="col-md-12 text-center">
                     <button type="submit" class="btn btn-outline-primary">Send message</button>
                   </div>
-                  <div id="form-response"></div>
+                  <div id="form-response1" class="alert alert-success" style="display: none;">
+                    <strong>Success!</strong> The email was sent successfully. I will get back to you ASAP!
+                  </div>
+                  <div id="form-response2" class="alert alert-danger" style="display: none;">
+                    <strong>Failure!</strong> Something went wrong. I will fix this. If you know me, tell me!
+                  </div>
                 </div>
               </div>
             </form>
@@ -533,7 +538,7 @@
 
               $.ajax({
                   type: "POST",
-                  url: 'https://awcbrtpo03.execute-api.us-east-1.amazonaws.com/prod/EmailForward',
+                  url: 'https://awcbrtpo03.execute-api.us-east-1.amazonaws.com/prod/NodeForwarder',
                   contentType: 'application/json',
                   data: JSON.stringify({
                       'name': name,
@@ -543,12 +548,10 @@
                       'message': message
                   }),
                   success: function(res){
-                      alert("Email sent successfully!");
-                      $('#form-response').text('Email was sent.');
+                      document.getElementById("form-response1").style.display = "block";
                   },
                   error: function(){
-                      alert("Email error!");
-                      $('#form-response').text('Error.');
+                      document.getElementById("form-response2").style.display = "block";
                   }
               });
 
