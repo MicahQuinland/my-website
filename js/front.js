@@ -210,33 +210,37 @@ $(function () {
     });
 
     /* =========================================
-     * for demo purpose
+     * for contact
      *  =======================================*/
 
-    var stylesheet = $('link#theme-stylesheet');
-    $("<link id='new-stylesheet' rel='stylesheet'>").insertAfter(stylesheet);
-    var alternateColour = $('link#new-stylesheet');
+    $("#contact-form").submit(function(e) {
+        e.preventDefault();
 
-    if ($.cookie("theme_csspath")) {
-        alternateColour.attr("href", $.cookie("theme_csspath"));
-    }
+        var name = $("#name").val(),
+            surname = $("#surname").val(),
+            email = $("#email").val(),
+            phone = $("#phone").val(),
+            message = $("#message").val();
 
-    $("#colour").change(function () {
+        $.ajax({
+            type: "POST",
+            url: 'https://9ukujask5c.execute-api.us-east-1.amazonaws.com/default/NodeForwarder',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                'name': name,
+                'surname': surname,
+                'email': email,
+                'phone': phone,
+                'message': message
+            }),
+            success: function(res){
+                document.getElementById("form-response1").style.display = "block";
+            },
+            error: function(){
+                document.getElementById("form-response2").style.display = "block";
+            }
+        });
 
-        if ($(this).val() !== '') {
-
-            var theme_csspath = 'css/style.' + $(this).val() + '.css';
-
-            alternateColour.attr("href", theme_csspath);
-
-            $.cookie("theme_csspath", theme_csspath, {
-                expires: 365,
-                path: document.URL.substr(0, document.URL.lastIndexOf('/'))
-            });
-
-        }
-
-        return false;
     });
 
 });
@@ -254,7 +258,7 @@ function map() {
 
         function initMap() {
 
-            var location = new google.maps.LatLng(50.0875726, 14.4189987);
+            var location = new google.maps.LatLng(41.766598, -72.674000);
 
             var mapCanvas = document.getElementById('map');
             var mapOptions = {
@@ -274,9 +278,9 @@ function map() {
             });
 
             var contentString = '<div class="info-window">' +
-                '<h3>Info Window Content</h3>' +
+                '<h3>Current work city</h3>' +
                 '<div class="info-content">' +
-                '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
+                '<p>This is the city I currently work in. Since I do not have a public office this will give you an idea of where I am currently based. Please do not go to this exact location as I will not be there.</p>' +
                 '</div>' +
                 '</div>';
 

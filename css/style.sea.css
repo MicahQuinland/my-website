@@ -557,6 +557,14 @@ nav.navbar a.nav-link.active, nav.navbar a.nav-link:hover {
 * =====================
 *
 */
+
+.customers-section:before {
+  background: bg-gray;
+  height: 50px;
+  display: block;
+  content: '';
+}
+
 .customers-section img {
   padding: 10px;
   max-width: 80px;
