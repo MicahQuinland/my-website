@@ -184,6 +184,10 @@ nav.navbar a.nav-link.active, nav.navbar a.nav-link:hover {
   color: rgb(0, 0, 0);
 }
 
+.intro-section p.ex1 {
+  margin-bottom: 50px;
+}
+
 .intro-section .logo, .intro-section p {
   margin-bottom: 120px;
 }
@@ -558,17 +562,17 @@ nav.navbar a.nav-link.active, nav.navbar a.nav-link:hover {
 *
 */
 
-.customers-section:before {
+/* .customers-section:before {
   background: bg-gray;
   height: 50px;
   display: block;
   content: '';
-}
+} */
 
-.customers-section img {
+/* .customers-section img {
   padding: 10px;
   max-width: 80px;
-}
+} */
 
 /*
 *
