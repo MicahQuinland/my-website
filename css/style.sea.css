@@ -323,14 +323,15 @@ nav.navbar a.nav-link.active, nav.navbar a.nav-link:hover {
 
 .testimonials .item .testimonial .name-picture {
   float: right;
-  width: 80%;
+  width: 100%;
   text-align: right;
 }
 
 .testimonials .item .testimonial .name-picture h5 {
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  float: left;
+  letter-spacing: 0em;
   color: #777;
 }
 
