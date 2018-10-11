@@ -218,6 +218,16 @@ $(function () {
     $("#contact-form").submit(function(e) {
         e.preventDefault();
 
+        var captcha = grecaptcha.getResponse();
+
+        if (captcha.length == 0) {
+
+            document.getElementById("form-response3").style.display = "block";
+            grecaptcha.reset();
+            return false;
+            
+        }
+
         var name = $("#name").val(),
             surname = $("#surname").val(),
             email = $("#email").val(),
@@ -237,9 +247,11 @@ $(function () {
             }),
             success: function(res){
                 document.getElementById("form-response1").style.display = "block";
+                grecaptcha.reset();
             },
             error: function(){
                 document.getElementById("form-response2").style.display = "block";
+                grecaptcha.reset();
             }
         });
 

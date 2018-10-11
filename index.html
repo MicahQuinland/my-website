@@ -444,7 +444,7 @@
                   <div class="col-md-12">
                     <textarea id="message" placeholder="Message for me *" rows="4" required="required" class="form-control"></textarea>
                   </div>
-                  <div class="g-recaptcha form-check" required="required" data-sitekey="6LcepHQUAAAAAOf2srKCNOjoePnQ-DX1MSDjHH_6"></div>
+                  <div class="g-recaptcha form-check" data-sitekey="6LcepHQUAAAAAOf2srKCNOjoePnQ-DX1MSDjHH_6"></div>
                   <div class="col-md-12 text-center">
                     <button type="submit" class="btn btn-outline-primary">Send message</button>
                   </div>
@@ -453,6 +453,9 @@
                   </div>
                   <div id="form-response2" class="alert alert-danger" style="display: none;">
                     <strong>Failure!</strong> Something went wrong. I will fix this. If you know me already, tell me!
+                  </div>
+                  <div id="form-response3" class="alert alert-danger" style="display: none;">
+                    <strong>Failure!</strong> You need to complete the reCaptcha above!
                   </div>
                 </div>
               </div>
