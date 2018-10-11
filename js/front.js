@@ -95,6 +95,8 @@ $(function () {
     $('#filter a').click(function (e) {
         e.preventDefault();
 
+        closeReference();
+
         $('#filter li').removeClass('active');
         $(this).parent('li').addClass('active');
 

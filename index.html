@@ -265,7 +265,7 @@
           <ul id="filter" data-animate="fadeInUp">
             <li class="active"><a href="#" data-filter="all">All</a></li>
             <li><a href="#" data-filter="aws">AWS</a></li>
-            <li><a href="#" data-filter="desktop">DESKTOP</a></li>
+            <li><a href="#" data-filter="desktop">DESKTOP APP</a></li>
             <li><a href="#" data-filter="opensource">OPEN SOURCE</a></li>
             <li><a href="#" data-filter="other">Other</a></li>
           </ul>
@@ -283,6 +283,21 @@
           <!-- Reference detail-->
           <div id="references-masonry" data-animate="fadeInUp">
             <div class="row">
+                <div data-category="desktop" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="img/portfolio-4.jpg" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+                            <h3 class="h4 reference-title">Desktop Video Game</h3>
+                            <p>Destroy all blocks before time expires</p>
+                          </div>
+                        </div></a>
+                      <div data-images="img/portfolio-4.jpg" class="sr-only reference-description">
+                        <p>This is one of several Unity games I developed. The objective of the game is to destroy all the blocks by pushing them off the map before time expires. It has three levels, each more difficult and with less time to complete. Other games include 3D blackjack game and 3D Yahtzee dice game.</p>
+                        <p>The games are created using the Unity Game Engine and assets that are publicly available with modifications from me. My GitHub holds just a few of the many files it takes to create a game. They include the gaming logic that controls how each game behaves. If you download the project file from my DropBox below it will include all documentation for my block destroy game, a copy of full source code, and the game itself (.exe file).</p>
+                        <p class="buttons text-center"><a href="https://github.com/MicahQuinland/UnityGames" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit Github Project</a><a href="https://www.dropbox.com/s/awecj0c5frdf8rw/MicahGame1.zip?dl=0" target="_blank" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download Project Files</a></p>
+                      </div>
+                    </div>
+                  </div>
                   <div data-category="aws" class="reference-item col-lg-3 col-md-6">
                     <div class="reference"><a href="#"><img src="img/portfolio-1.jpg" alt="" class="img-fluid">
                         <div class="overlay">
@@ -305,7 +320,7 @@
                             <p>Cloud based emergency notification service</p>
                           </div>
                         </div></a>
-                      <div data-images="img/main-slider1.jpg" class="sr-only reference-description">
+                      <div data-images="img/portfolio-2.jpg" class="sr-only reference-description">
                         <p>This project was a service to alert a list of contacts of an emergency evacuation. This tool allowed a master user to activate an Emergency evacuation through AWS Pinpoint two-way SMS messaging. The account has a designated long-code (a phone number) that once messaged, would be forwarded to Lambda for processing. Lambda then created an AWS Pinpoint campaign from the list of contacts and sent out the alert to their email and phone number.</p>
                         <p>The user could then reply Safe or Help and their message, phone number, and name would be sent to Lambda and added to a DynamoDB tracking table for those who replied Safe, Help, or have yet to respond. Every two minutes the master user would receive an email from SES with the status of everyone on the contact list. Once the Master user sent the kill text the tool shuts off and resets everything for the next evacuation.</p>
                       </div>
@@ -316,28 +331,13 @@
                         <div class="overlay">
                           <div class="inner">
                             <h3 class="h4 reference-title">Desktop Reporting Tool</h3>
-                            <p>Fills templated Word docs based on tags imported from a local database</p>
+                            <p>App for extracting, viewing, and reporting data</p>
                           </div>
                         </div></a>
-                      <div data-images="img/main-slider1.jpg" class="sr-only reference-description">
-                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
-                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Peg scale sir style truth ought.</p>
-                        <p class="buttons text-center"><a href="https://github.com/MicahQuinland" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit Github Project</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-category="desktop" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/portfolio-4.jpg" alt="" class="img-fluid">
-                        <div class="overlay">
-                          <div class="inner">
-                            <h3 class="h4 reference-title">Desktop Video Game</h3>
-                            <p>Dynamic Maze Unity based game </p>
-                          </div>
-                        </div></a>
-                      <div data-images="img/main-slider1.jpg" class="sr-only reference-description">
-                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
-                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Peg scale sir style truth ought.</p>
-                        <p class="buttons text-center"><a href="https://github.com/MicahQuinland" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit Github Project</a></p>
+                      <div data-images="img/portfolio-3.jpg" class="sr-only reference-description">
+                        <p>The desktop reporting tool seen above is a complete desktop application. The tool extracts information for the Excel spreadsheets, provides an interface to selectively create datasets from the spreadsheets, stores the datasets in the database per the user’s selection, and generates reports by populating tokens within a selected template. The application has many basic and advanced features sets from an easy to use toolbar buttons to a SQL query processor.</p>
+                        <p>I was responsible for the Graphical User Interface of the application, therefore, I was deeply involved in the Excel and SQLite API implementation and interfacing. A detailed summary of the project as well as all the source code is available for download from my dropbox below. On Github, there are copies of my C# GUI code.</p>
+                        <p class="buttons text-center"><a href="https://github.com/MicahQuinland/WordReportGenerator" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit Github Project</a><a href="https://www.dropbox.com/s/w1j42r084cnb93t/ReportTool.zip?dl=0" target="_blank" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download Project Files</a></p>
                       </div>
                     </div>
                   </div>
@@ -346,10 +346,10 @@
                         <div class="overlay">
                           <div class="inner">
                             <h3 class="h4 reference-title">Micah Alexa Skill</h3>
-                            <p>Access/Activate AWS services with voice</p>
+                            <p>Access & Activate AWS services with voice</p>
                           </div>
                         </div></a>
-                      <div data-images="img/main-slider1.jpg" class="sr-only reference-description">
+                      <div data-images="img/portfolio-5.jpg" class="sr-only reference-description">
                         <p>First, my Alexa skill is not public. It’s only available through my AWS account. However, it currently does a couple things. You can ask for a certain fact number and Alexa will recite that fact. Alexa can also give you a random fact. The fact is then texted to my phone.</p>
                         <p>In the next phase of my skill I will create new Alexa “Intent” which will handle an AWS service for example DynamoDB. Then I’ll create a “Slot type” for a table name. I could say “Alexa delete or empty User Accounts table” and then Lambda will execute that AWS SDK call. Another example would be “Alexa what’s my AWS bill” and she can return that info as well.</p>
                       </div>
@@ -360,11 +360,12 @@
                         <div class="overlay">
                           <div class="inner">
                             <h3 class="h4 reference-title">Automated CI/CD Website Pipeline</h3>
-                            <p>Unpacks Git changes to redeploy website changes</p>
+                            <p>Automatically deploy serverless website updates via Git webhook</p>
                           </div>
                         </div></a>
-                      <div data-images="img/main-slider1.jpg" class="sr-only reference-description">
+                      <div data-images="img/portfolio-6.jpg" class="sr-only reference-description">
                         <p>This piece of code is pretty simple since GitHub has webhooks to trigger AWS Code Build. Just point Code Build at your GitHub repository and have an update trigger a lambda function. The lambda function can then unpack the Code Build zip file and update static web files in another S3 bucket. Later I could fully integrate my project into Code Pipeline and run unit test on the build.</p>
+                        <p class="buttons text-center"><a href="https://github.com/MicahQuinland/CICD-Lambda" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit Github Project</a></p>
                       </div>
                     </div>
                   </div>
@@ -376,10 +377,9 @@
                             <p>Improvements to open source RFID API/SDK</p>
                           </div>
                         </div></a>
-                      <div data-images="img/main-slider1.jpg" class="sr-only reference-description">
-                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
-                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Peg scale sir style truth ought.</p>
-                        <p class="buttons text-center"><a href="https://github.com/MicahQuinland" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit Github Project</a></p>
+                      <div data-images="img/portfolio-7.jpg" class="sr-only reference-description">
+                        <p>Starting from the ThingMagic Mercury API I made modifications to the Java code to meet new requirements of the new RFID implementations. These additions include adding Hex to ASCII conversion, automatic USB port detection, and an alert of the proper data the end user was looking to read from an RFID inlay. Next, I will add range reduction and continuous read to reduce the necessary steps for use and the likelihood of accidental inlay reads.</p>
+                        <p class="buttons text-center"><a href="https://github.com/MicahQuinland/AutoRFID" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit Github Project</a></p>
                       </div>
                     </div>
                   </div>
@@ -391,9 +391,9 @@
                             <p>Robots that battle eachother</p>
                           </div>
                         </div></a>
-                      <div data-images="img/main-slider1.jpg" class="sr-only reference-description">
-                        <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
-                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Peg scale sir style truth ought.</p>
+                      <div data-images="img/portfolio-8.jpg" class="sr-only reference-description">
+                        <p>While a part of a small team of developers I helped build an autonomous Sumobot from scratch. After first putting together the Sumobot assembly I wrote the C code that orchestrates the robot's decisions. The objective of the Sumobot is to push an opposing bot out of the ring while yourself staying within the boundaries. The Sumobot does not have any controller and make decisions on its own based on sensor data.</p>
+                        <p>I wrote the controller which took input values from two floor facing sensors (Left, Right) and three forward facing sensors (Left, Right, Middle) and turned them into output movements of the (Left, Right) motors either forward or backwards. Check out this demonstation <a href=" https://youtu.be/zFsiMzpaejs?t=40" target="_blank">https://www.youtube.com/SumoBots</a></p>
                       </div>
                     </div>
                   </div>

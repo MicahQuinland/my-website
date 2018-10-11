@@ -454,7 +454,7 @@ nav.navbar a.nav-link.active, nav.navbar a.nav-link:hover {
   overflow: hidden;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 400px) {
   .reference {
     max-width: 350px;
     margin: 0 auto;
@@ -536,13 +536,14 @@ nav.navbar a.nav-link.active, nav.navbar a.nav-link:hover {
 #detail .close {
   position: absolute;
   right: 0;
+  color: red;
   z-index: 999;
   display: block;
   width: 50px;
   height: 50px;
   margin-bottom: 20px;
   font-size: 3rem;
-  opacity: 0.3;
+  opacity: 0.5;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
