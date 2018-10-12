@@ -222,6 +222,8 @@ $(function () {
 
         if (captcha.length == 0) {
 
+            document.getElementById("form-response1").style.display = "none";
+            document.getElementById("form-response1").style.display = "none";
             document.getElementById("form-response3").style.display = "block";
             grecaptcha.reset();
             return false;
@@ -246,10 +248,14 @@ $(function () {
                 'message': message
             }),
             success: function(res){
+                document.getElementById("form-response3").style.display = "none";
+                document.getElementById("form-response2").style.display = "none";
                 document.getElementById("form-response1").style.display = "block";
                 grecaptcha.reset();
             },
             error: function(){
+                document.getElementById("form-response3").style.display = "none";
+                document.getElementById("form-response1").style.display = "none";
                 document.getElementById("form-response2").style.display = "block";
                 grecaptcha.reset();
             }
