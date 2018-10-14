@@ -298,7 +298,7 @@ function map() {
             });
 
             var contentString = '<div class="info-window">' +
-                '<h3>Current work city</h3>' +
+                '<h3>Current Work Location</h3>' +
                 '<div class="info-content">' +
                 '<p>This is the city I currently work in. Since I do not have a public office this will give you an idea of where I am currently based. Please do not go to this exact location as I will not be there.</p>' +
                 '</div>' +
