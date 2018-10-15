@@ -223,7 +223,7 @@ $(function () {
         if (captcha.length == 0) {
 
             document.getElementById("form-response1").style.display = "none";
-            document.getElementById("form-response1").style.display = "none";
+            document.getElementById("form-response2").style.display = "none";
             document.getElementById("form-response3").style.display = "block";
             grecaptcha.reset();
             return false;
